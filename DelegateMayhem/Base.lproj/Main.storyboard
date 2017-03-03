@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ReceivingVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ReceivingVC" customModule="DelegateMayhem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4G-wM-0R8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CB6-8d-usm"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="RecevingVC" id="ZOU-ei-qaZ">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ihB-TX-iY3">
+                                            <connections>
+                                                <segue destination="CsV-IO-Llp" kind="show" identifier="showSendingVC" id="qVA-pc-rh5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap the '+' button to add and send text using delegates" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LD-jA-mx7">
+                                <rect key="frame" x="16" y="60" width="343" height="587"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="X4G-wM-0R8" secondAttribute="trailing" id="1f9-cV-7Ig"/>
+                            <constraint firstItem="X4G-wM-0R8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4rZ-Tq-I6A"/>
+                            <constraint firstItem="X4G-wM-0R8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5B3-Lo-SFB"/>
+                            <constraint firstItem="0LD-jA-mx7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="FMv-WV-p3t"/>
+                            <constraint firstAttribute="trailing" secondItem="X4G-wM-0R8" secondAttribute="trailing" id="Ghj-Fk-vot"/>
+                            <constraint firstItem="0LD-jA-mx7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="OmP-uc-vsu"/>
+                            <constraint firstItem="0LD-jA-mx7" firstAttribute="top" secondItem="X4G-wM-0R8" secondAttribute="bottom" constant="20" id="SXo-Ig-shI"/>
+                            <constraint firstItem="X4G-wM-0R8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Zt3-ml-k5t"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0LD-jA-mx7" secondAttribute="bottom" constant="20" id="eyN-mc-qmw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="receivingLabel" destination="0LD-jA-mx7" id="kL7-L4-Dm7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--SendingVC-->
+        <scene sceneID="mHG-NK-c7h">
+            <objects>
+                <viewController id="CsV-IO-Llp" customClass="SendingVC" customModule="DelegateMayhem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="No0-1s-vkc"/>
+                        <viewControllerLayoutGuide type="bottom" id="jP4-Ay-bJY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sx1-Bp-h7C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap to enter some text!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9kV-tc-gsJ">
+                                <rect key="frame" x="16" y="70" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6wc-cl-BnD"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HN3-Yz-ydy">
+                                <rect key="frame" x="16" y="160" width="343" height="60"/>
+                                <color key="backgroundColor" red="0.18998533487319946" green="0.35768887400627136" blue="0.43821841478347778" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Fgz-S9-v3x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="CsV-IO-Llp" eventType="touchUpInside" id="EZC-si-MVs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9kV-tc-gsJ" firstAttribute="leading" secondItem="Sx1-Bp-h7C" secondAttribute="leadingMargin" id="NhR-Mi-yhR"/>
+                            <constraint firstItem="9kV-tc-gsJ" firstAttribute="trailing" secondItem="Sx1-Bp-h7C" secondAttribute="trailingMargin" id="f5R-Pj-cOm"/>
+                            <constraint firstItem="HN3-Yz-ydy" firstAttribute="trailing" secondItem="Sx1-Bp-h7C" secondAttribute="trailingMargin" id="kqU-Dg-O0i"/>
+                            <constraint firstItem="HN3-Yz-ydy" firstAttribute="top" secondItem="9kV-tc-gsJ" secondAttribute="bottom" constant="30" id="qk1-eT-g7b"/>
+                            <constraint firstItem="HN3-Yz-ydy" firstAttribute="leading" secondItem="Sx1-Bp-h7C" secondAttribute="leadingMargin" id="uN3-Ah-JB1"/>
+                            <constraint firstItem="9kV-tc-gsJ" firstAttribute="top" secondItem="No0-1s-vkc" secondAttribute="bottom" constant="50" id="z0V-fY-du3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dataEntryTextField" destination="9kV-tc-gsJ" id="syy-cH-h1Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fwx-Ed-vdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752.79999999999995" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
